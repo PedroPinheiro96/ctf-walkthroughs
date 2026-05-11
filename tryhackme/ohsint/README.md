@@ -12,6 +12,7 @@ Are you able to use open source intelligence to solve this challenge?
 
 ## ⚙️ Tools Used
 
+- Exiftool
 - [CyberChef](https://gchq.github.io/CyberChef/)
 - [Wigle](https://wigle.net/)
 
