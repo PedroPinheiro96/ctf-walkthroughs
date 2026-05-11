@@ -89,7 +89,7 @@ https://github.com/OWoodfl1nt/people_finder/commit/433f4d949ebf424817da0f09820de
 -> github
 ```
 
-##### Q6: Where has he gone on holiday?
+#### Q6: Where has he gone on holiday?
 
 The latest blog post revealed the user's current travel location.
 
@@ -99,7 +99,7 @@ The latest blog post revealed the user's current travel location.
 -> New York
 ```
 
-##### Q7: What is the person's password?
+#### Q7: What is the person's password?
 
 After inspecting the WordPress blog's source code, I was able to find what seemed to be a password.
 
