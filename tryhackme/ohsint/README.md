@@ -26,7 +26,7 @@ What information can you possibly get with just one image file?
 
 First, I used `exiftool` to extract metadata from the `WindowsXP.jpg` file.
 
-<div align="center"><img src="../attachments//Pasted image 20260510161623.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260510161623.png"/></div>
 
 The metadata revealed multiple pieces of information about the file and its creator.
 It's also possible to see the author of the file - `OWoodflint`.
@@ -35,7 +35,7 @@ Searching the username `OWoodflint` across public platforms revealed associated 
 
 Only the `Twitter/X` profile had a profile picture.
 
-<div align="center"><img src="../attachments//Pasted image 20260510172817.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260510172817.png"/></div>
 
 ```text
 -> cat
@@ -45,7 +45,7 @@ Only the `Twitter/X` profile had a profile picture.
 
 The `README.md` file in the `Github` profile showed that the user is from `London`.
 
-<div align="center"><img src="../attachments//Pasted image 20260510164044.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260510164044.png"/></div>
 
 ```text
 -> London
@@ -55,7 +55,7 @@ The `README.md` file in the `Github` profile showed that the user is from `Londo
 
 One of the posts on `Twitter/X` contained a `BSSID`.
 
-<div align="center"><img src="../attachments//Pasted image 20260510164011.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260510164011.png"/></div>
 
 A `BSSID` is the unique `MAC (Media Access Control)` address assigned to a wireless access point.
 
@@ -63,7 +63,7 @@ A `BSSID` is the unique `MAC (Media Access Control)` address assigned to a wirel
 
 Querying the recovered `BSSID` in `Wigle` returned the associated wireless network:
 
-<div align="center"><img src="../attachments//Pasted image 20260510173610.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260510173610.png"/></div>
 
 ```text
 -> UnileverWiFi

@@ -61,7 +61,7 @@ After visiting the homepage at `http://10.129.150.50`, I saw the message below:
 <div align="center"><img src="../attachments/Pasted image 20260511140329.png"/></div>
 
 ```
-->user-agent
+-> user-agent
 ```
 
 #### Q3: What is the agent name?
@@ -263,7 +263,7 @@ The exploit bypassed the intended sudo restriction and spawned a `root` shell.
 #### Q3: (Bonus) Who is Agent R?
 
 ```
-DesKel
+-> DesKel
 ```
 
 ## 🧠 Lessons Learned
