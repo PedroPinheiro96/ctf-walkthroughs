@@ -23,7 +23,7 @@ Target IP: 10.129.169.208
 
 First, I enumerated the target using `nmap` to identify open ports, running services, and service versions.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513120454.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513120454.png"/></div>
 
 The scan returned the following results:
 
@@ -38,52 +38,52 @@ Anonymous authentication was enabled, allowing access to the FTP server without 
 
 I listed the contents of the FTP directory and discovered `note_to_jake.txt`, which I then downloaded for further analysis.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513120524.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513120524.png"/></div>
 
 The note indicates that Jake uses a weak password.
 This suggests that a dictionary attack against the account may be successful.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513120819.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513120819.png"/></div>
 
 Next, I used `Hydra` to perform dictionary attacks against Jake's FTP and SSH accounts.
 
 Hydra did not recover valid FTP credentials, suggesting that either the FTP account used a stronger password or password authentication was not applicable for the exposed service.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513125750.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513125750.png"/></div>
 
 I then targeted the SSH service, where Hydra successfully recovered Jake's password.
 
 SSH: `987654321`
 
-<div align="centre"><img src="../attachments/Pasted image 20260513125813.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513125813.png"/></div>
 
 I connected to the target via SSH using Jake's credentials and listed the contents of the current directory, which was empty.
 
 Then, I enumerated the contents of `/home` and its subdirectories and found the `user.txt` flag in the `/home/holt/` directory.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513130023.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513130023.png"/></div>
 
 I used `cat` to print the contents of the file:
 
-<div align="centre"><img src="../attachments/Pasted image 20260513130056.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513130056.png"/></div>
 
 With the user flag obtained, I proceeded to enumerate potential privilege escalation vectors.
 
 I started by checking which commands the user `jake` could run as `sudo`:
 
-<div align="centre"><img src="../attachments/Pasted image 20260513130139.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513130139.png"/></div>
 
 The output shows that `jake` can execute `/usr/bin/less` with `sudo` without providing a password.
 
 Since `less` can be abused for privilege escalation, I checked [GTFOBins](https://gtfobins.org/gtfobins/less/#shell) and found the following technique:
 
-<div align="centre"><img src="../attachments/Pasted image 20260720120838.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260720120838.png"/></div>
 
 I executed the GTFOBins technique on the target, successfully escalating my privileges to `root`.
 
 I checked the `/root/` directory and found the `root.txt` flag.
 
-<div align="centre"><img src="../attachments/Pasted image 20260513131808.png"/></div>
+<div align="center"><img src="../attachments/Pasted image 20260513131808.png"/></div>
 
 ## 🧠 Lessons Learned
 
