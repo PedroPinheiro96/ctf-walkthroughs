@@ -1,7 +1,7 @@
 # Brooklyn Nine Nine – TryHackMe
 
 - Difficulty: easy
-- Date: 2026-05-13
+- Date: 2026-07-20
 - Tags: ctf, linux, brute force, password guessing, privilege escalation, tryhackme
 
 ## 🧩 Overview
